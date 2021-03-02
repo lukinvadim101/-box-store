@@ -1,0 +1,22 @@
+@mixin btn_prev {
+    display: block;
+    width: 11px;
+    height: 11px;
+    // border-bottom: 2px solid #C2C2C2;
+    // border-left: 2px solid #C2C2C2;
+    border: 2px solid #C2C2C2;
+    border-radius: 15%;
+    transform: rotate(45deg);
+    margin: 3px;
+    }
+
+@mixin btn_next {
+    display: block;
+    width: 11px;
+    height: 11px;
+    border-bottom: 2px solid #C2C2C2;
+    border-left: 2px solid #C2C2C2;
+    border-radius: 15%;
+    transform: rotate(225deg);
+    // margin: -1px;
+        }
