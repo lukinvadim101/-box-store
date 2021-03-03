@@ -1,0 +1,92 @@
+.box-params {
+    width: 260px;
+    max-height: 616px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 40px -10px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    &__title {
+        font-weight: 600;
+        font-size: 16px;
+        color: #000000;
+        padding: 12px 0 0 26px;
+    }
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    &__lwh {
+        padding-top: 12px;
+        width: 80%;
+        height: 63px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__parametr {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: #000000;
+        &_checks {
+            margin-bottom: 10px;
+        }
+    }
+    &__param-wrapper {
+        padding-top: 7px;
+    }
+    &__input {
+        width: 67px;
+        height: 30px;
+        background: #FAFAFA;
+        border: 1px solid #D8D8D8;
+        box-sizing: border-box;
+        border-radius: 3px;
+        padding: 0 12px 0 12px;
+    }
+    &__cardboard {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 85px;
+        }
+        &__input {
+            margin: 0;
+            &_round {
+                background: #0000;
+                border: 1px solid #E3E3E3;
+                box-sizing: border-box;
+                border-radius: 50%; // как сдалть круглым?
+            }
+        }
+    }
+    &__counter {
+        width: 80%;
+        height: 63px;
+        margin-top: 10px;
+        &__wrapper {
+            margin-top: 10px;
+            display: flex;
+            width: 142px;
+            justify-content: space-between;
+        }
+        &__input {
+            width: 70px;
+            height: 30px;
+            background: #FAFAFA;
+            border: 1px solid #D8D8D8;
+            box-sizing: border-box;
+            border-radius: 3px;
+            padding-left: 50%;
+        }
+        &__minus {
+        //    плюс и минус в css
+        }
+    }
+}
+hr-line {
+    border: 1px solid #E3E3E3;
+}
