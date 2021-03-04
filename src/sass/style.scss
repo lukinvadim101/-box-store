@@ -10,31 +10,8 @@ body {
 @import 'base/variables';
 @import 'base/mixin';
 @import 'blocks/buttons';
+@import 'blocks/general-grid';
 @import 'blocks/menu';
 @import 'blocks/box-params';
 @import 'blocks/box-params-result';
 @import 'blocks/cart';
-
-.grid-container {
-    width: 1140px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 851px 260px;
-    grid-template-rows: auto;
-    grid-gap: 0 32px;
-    grid-template-areas: 
-        "menu params"
-        "main cart" ;
-}
-.menu {
-    grid-area: menu;
-}
-.params {
-    grid-area: params;
-}
-.cart {
-    grid-area: cart;
-}
-.main {
-    grid-area: main;
-}

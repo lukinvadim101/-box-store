@@ -1,0 +1,36 @@
+.cart {
+    width: 260px;
+    max-height: 612px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 40px -10px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    &__divider {
+        @include divider;
+    }
+    &__delivery {
+        margin-top: 28px;
+        width: 81%;
+        font-weight: 400;
+        font-size: 14px;
+        span {
+            font-weight: 600;
+        }
+    }
+    &__total-price {
+        width: 81%;
+        margin-top: 8px;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    &__button {
+        width: 80%;
+        margin-top: 27px;
+    }
+}

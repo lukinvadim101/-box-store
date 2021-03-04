@@ -1,0 +1,23 @@
+.grid-container {
+    width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 851px 260px;
+    grid-template-rows: auto;
+    grid-gap: 12px 32px;
+    grid-template-areas: 
+        "menu params"
+        "main cart" ;
+}
+.menu {
+    grid-area: menu;
+}
+.params {
+    grid-area: params;
+}
+.cart {
+    grid-area: cart;
+}
+.main {
+    grid-area: main;
+}
