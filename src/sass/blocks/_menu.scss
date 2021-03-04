@@ -1,9 +1,11 @@
 @import '../base/variables';
 
 .menu {
-    width: 100%;
+    max-width: 851px;
     background-color: #F4F4F4;
     border-radius: 5px 3px 0px 0px;
+    max-height: 92px;
+
     &__wrapper {
         display: flex;
         width: max-content;
@@ -11,6 +13,7 @@
         padding-left: 43px;
         height: 46px;
     }
+
     &__item {
         font-weight: 600;
         font-size: 16px;
@@ -19,10 +22,11 @@
         width: 166px;
         height: 27px;
         margin-right: 12px;
+
         &_active {
             color: #000000;
         }
-    }   
+    }
 }
 
 .box-type {
@@ -33,6 +37,7 @@
     align-items: center;
     padding-left: 43px;
     height: 46px;
+
     &__item {
         width: 117px;
         height: 30px;
@@ -43,12 +48,14 @@
         align-self: center;
     }
 }
+
 .page-counter {
     display: flex;
     width: 104px;
     justify-content: space-between;
     margin-left: auto; // выравнивание анти-флекс
     padding-right: 11px;
+
     &__btn {
         width: 30px;
         height: 30px;
@@ -58,17 +65,20 @@
         border-style: none;
         border-radius: 3px;
     }
+
     &__nums {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
+
     &__num {
         margin: 2px;
         text-decoration: none;
         font-size: 12px;
         line-height: 15px;
         color: #787878;
+
         &_active {
             color: $main-color;
         }
