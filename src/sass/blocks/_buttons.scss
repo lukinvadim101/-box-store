@@ -8,4 +8,17 @@
     font-weight: 500;
     font-size: 14px;
     color: #FFFFFF;
+}
+
+.button__i { // сделать кнопку
+    width: 22px;
+    height: 22px;
+    background: #D8D8D8;
+    border-radius: 3px;
+    ::before {
+        content: " ";
+        width: 2px;
+        height: 2px;
+        background-color:#FFFFFF;
     }
+}

@@ -1,0 +1,59 @@
+.showcase {
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 34px 32px;
+    &__item {
+        width: 262px;
+        height: 342px;
+        background: #FFFFFF;
+        border: 1px solid #DADADA;
+        box-sizing: border-box;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+    &__button {
+        align-self: flex-end;
+        margin: 15px 16px 0 0;
+    }
+    &__img {
+        width: 220px;
+        height: 180px;
+        overflow: hidden;
+        position: relative;
+        img {
+            object-fit: cover;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            max-width: 220px;
+            max-height: 220px;
+            object-fit:cover;
+        }
+    }
+    &__divider {
+        @include divider;
+    }
+    &__wrapper {
+        margin-top: 20px;
+        width: 80%;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 16px;
+    }
+    &__article {
+        margin-top: 4px;
+        font-weight: 300;
+        font-size: 10px;
+    }
+    &__price {
+        margin-top: 15px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+}

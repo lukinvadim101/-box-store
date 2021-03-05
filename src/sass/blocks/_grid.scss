@@ -4,10 +4,11 @@
     display: grid;
     grid-template-columns: 851px 260px;
     grid-template-rows: auto;
-    grid-gap: 12px 32px;
+    grid-gap: 0px 32px;
     grid-template-areas: 
         "menu params"
-        "main cart" ;
+        "showcase params"
+        "showcase cart" ;
 }
 .menu {
     grid-area: menu;
@@ -18,6 +19,6 @@
 .cart {
     grid-area: cart;
 }
-.main {
-    grid-area: main;
+.showcase {
+    grid-area: showcase;
 }
