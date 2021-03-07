@@ -3,12 +3,12 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 851px 260px;
-    grid-template-rows: auto;
+    grid-template-rows: 92px auto 46px;
     grid-gap: 0px 32px;
     grid-template-areas: 
-        "menu params"
-        "showcase params"
-        "showcase cart" ;
+        "menu aside"
+        "showcase aside"
+        "basement aside";
 }
 .menu {
     grid-area: menu;
@@ -22,3 +22,10 @@
 .showcase {
     grid-area: showcase;
 }
+.basement {
+    grid-area: basement;
+}
+.aside {
+    grid-area: aside;
+}
+

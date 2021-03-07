@@ -1,7 +1,10 @@
 .showcase {
-    margin-top: 12px;
+    padding-top: 30px;
     display: grid;
+    height: min-content;
+    width: 851px;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content;
     gap: 34px 32px;
     &__item {
         width: 262px;
@@ -14,6 +17,7 @@
         flex-direction: column;
         align-items: center;
         overflow: hidden;
+
     }
     &__button {
         align-self: flex-end;
@@ -21,7 +25,7 @@
     }
     &__img {
         width: 220px;
-        height: 180px;
+        height: 170px;
         overflow: hidden;
         position: relative;
         img {

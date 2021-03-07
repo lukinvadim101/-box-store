@@ -4,13 +4,14 @@
 
 body {
     background-color: #E5E5E5;
-    // margin: 0;
+    margin: 0;
 }
 
 @import 'base/variables';
 @import 'base/mixin';
 @import 'blocks/buttons';
 @import 'blocks/grid';
+@import 'blocks/basement';
 @import 'blocks/menu';
 @import 'blocks/box-params';
 @import 'blocks/box-params-result';
