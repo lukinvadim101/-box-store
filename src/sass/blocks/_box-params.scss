@@ -1,27 +1,34 @@
 .params {
     width: 260px;
-    height: max-content;
+    max-height: 616px;
     background: #FFFFFF;
     box-shadow: 0px 20px 40px -10px rgba(0, 0, 0, 0.1);
     border-radius: 3px;
+    padding-top: 30px;
 
     &__title {
         font-weight: 600;
         font-size: 16px;
+        line-height: 16px;
         color: #000000;
-        padding-top: 12px;
+        margin: 0;
         width: 80%;
     }
 
     &__container {
         display: flex;
-        justify-content: center;
         align-items: center;
         flex-direction: column;
     }
 
-    &__lwh {
-        padding-top: 12px;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    &__lwh-container {
+        margin-top: 16px;
         width: 82%;
         height: 63px;
         display: flex;
@@ -33,16 +40,8 @@
         font-size: 12px;
         line-height: 15px;
         color: #000000;
-
-        &_checks {
-            margin-bottom: 10px;
-        }
     }
-
-    &__param-wrapper {
-        padding-top: 7px;
-    }
-
+    
     &__input {
         width: 67px;
         height: 30px;
@@ -58,29 +57,82 @@
         width: 80%;
         display: flex;
         justify-content: space-between;
+        margin-top: 12px;
+        &-type, &-color {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 66px;
+        }
 
         &__wrapper {
             display: flex;
-            justify-content: space-between;
-            width: 85px;
+            justify-content: flex-start;
+            width: 95px;
+            align-items: center;
         }
 
-        &__input {
-            margin: 0;
-
-            &_round {
-                background: #0000;
-                border: 1px solid #E3E3E3;
-                box-sizing: border-box;
-                border-radius: 50%; // как сдалть круглым?
+        &__parametr {
+            &__type {
+                margin-left: 9px;
+            }
+            &__color {
+                margin-left: 24px;
             }
         }
+        
+        &__input {
+            margin: 0;
+            display: none;  
+            &_round {
+                width: 17px;
+                height: 17px;
+                border: 1px solid #E3E3E3;
+                position: relative;
+                border-radius: 50%;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 11px;
+                    height: 11px;
+                    border-radius: 50%;
+                    background-color: $main-color;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    transition: .2s;
+                }
+            }
+            &_sqr {
+                width: 17px;
+                height: 17px;
+                border: 1px solid #E3E3E3;
+                position: relative;
+                border-radius: 20%;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 20%;
+                    background-color: #D9A262;
+                    // background-image:"../../icons/checkmark.svg" ;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    transition: .2s;
+                }
+            }
+        }
+        
     }
 
     &__counter {
         width: 80%;
         height: 63px;
-        margin-top: 10px;
+        margin-top: 20px;
 
         &__wrapper {
             margin-top: 10px;
@@ -105,6 +157,12 @@
     }
 
     &__divider {
-        @include divider;
+        @include divider (20px 0 18px 0);
     }
+}
+.params__cardboard__input:checked + .params__cardboard__input_round::before {
+    opacity: 1;
+}
+.params__cardboard__input:checked + .params__cardboard__input_sqr::before {
+    opacity: 1;
 }

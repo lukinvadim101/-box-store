@@ -42,140 +42,135 @@
                 </div>
             </nav>
             <div class="aside-container">
-            <div class="params">
-                <div class="params__container">
-                    <h2 class="params__title">
-                        Задайте параметры
-                    </h2>
-                    <div class="params__lwh">
-                        <div class="params__item">
-                            <div class="params__parametr">Длина</div>
-                            <div class="params__param-wrapper">
-                                <input type="text" id="lenght" class="params__input">
-                            </div>
-                        </div>
-                        <div class="params__item">
-                            <div class="params__parametr">Ширина</div>
-                            <div class="params__param-wrapper">
-                                <input type="text" id="width" class="params__input">
-                            </div>
-                        </div>
-                        <div class="params__item">
-                            <div class="params__parametr">Высота</div>
-                            <div class="params__param-wrapper">
-                                <input type="text" id="height" class="params__input">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="params__cardboard">
-                        <div class="params__cardboard-type">
-                            <div class="params__parametr params__parametr_checks">Тип картона</div>
-                            <div class="params__cardboard__wrapper">
-                                <div>
-                                    <input type="checkbox" name="mgk-type" id="mgk-type"
-                                        class="params__cardboard__input params__cardboard__input_round">
+                <div class="params">
+                    <div class="params__container">
+                        <h2 class="params__title">
+                            Задайте параметры
+                        </h2>
+                        <div class="params__lwh-container">
+                            <div class="params__item">
+                                <div class="params__parametr">Длина</div>
+                                <div class="params__param-wrapper">
+                                    <input type="text" id="lenght" class="params__input">
                                 </div>
-                                <div class="params__parametr">МГК 1,5мм</div>
                             </div>
-                            <div class="params__cardboard__wrapper">
-                                <div>
-                                    <input type="checkbox" name="t23-type" id="t23-type"
-                                        class="params__cardboard__input params__cardboard__input_round">
+                            <div class="params__item">
+                                <div class="params__parametr">Ширина</div>
+                                <div class="params__param-wrapper">
+                                    <input type="text" id="width" class="params__input">
                                 </div>
-                                <div class="params__parametr">Т-23 3мм</div>
                             </div>
-                        </div>
-                        <div class="params__cardboard-color">
-                            <div class="params__parametr params__parametr_checks">Цвет картона</div>
-                            <div class="params__cardboard__wrapper">
-                                <div>
-                                    <input type="checkbox" name="white-color" id="white-color"
-                                        class="params__cardboard__input">
+                            <div class="params__item">
+                                <div class="params__parametr">Высота</div>
+                                <div class="params__param-wrapper">
+                                    <input type="text" id="height" class="params__input">
                                 </div>
-                                <div class="params__parametr">Белый</div>
                             </div>
-                            <div class="params__cardboard__wrapper">
+                        </div>
+                        <form class="params__cardboard">
+                            <div class="params__cardboard-type">
+                                <div class="params__parametr">Тип картона</div>
+                                <label for="mgk" class="params__cardboard__wrapper">
+                                    <input type="radio" name="type" id="mgk" class="params__cardboard__input" checked>
+                                    <span class="params__cardboard__input_round"></span>
+                                    <span class="params__parametr params__cardboard__parametr__type">МГК 1,5мм</span>
+                                </label>
+                                <label for="t23" class="params__cardboard__wrapper">
+                                    <input type="radio" name="type" id="t23" class="params__cardboard__input" >
+                                    <span class="params__cardboard__input_round"></span>   
+                                    <span class="params__parametr params__cardboard__parametr__type">Т-23 3мм</span>
+                                </label>
+                            </div>
+                            <div class="params__cardboard-color">
+                                <div class="params__parametr">Цвет картона</div>
+                                <label for="white" class="params__cardboard__wrapper">
+                                    <input type="radio" name="color" id="white" class="params__cardboard__input" >
+                                    <span class="params__cardboard__input_sqr"></span> 
+                                    <span class="params__parametr params__cardboard__parametr__color">Белый</span>
+                                </label>
+                                <label for="brown" class="params__cardboard__wrapper">
+                                    <input type="radio" name="color" id="brown" class="params__cardboard__input" checked>
+                                    <span class="params__cardboard__input_sqr"></span>   
+                                    <span class="params__parametr params__cardboard__parametr__color">Бурый</span>
+                                </label>
+                            </div>
+                        </form> <!-- chekbox блок -->
+                        <div class="params__counter">
+                            <div class="params__parametr">Колличество</div>
+                            <div class="params__counter__wrapper">
+                                <button class="page-counter__btn">
+                                    &#x2212;
+                                </button>
                                 <div>
-                                    <input type="checkbox" name="brown-color" id="brown-color"
-                                        class="params__cardboard__input">
+                                    <input type="number" name="box-count" id="box-count" class="params__counter__input">
                                 </div>
-                                <div class="params__parametr">Бурый</div>
+                                <button class="page-counter__btn">
+                                    &#x2b;
+                                </button>
+                            </div> <!-- counter контэйнер -->
+                        </div>
+                        <div class="params__divider"></div>
+                        <h2 class="params__title params__title__settings">Результат настройки</h2>
+                        <div class="params__result">
+                            
+                            <div class="params__result__wrapper">
+                                <div class="params__result__title">Четырёхклапанная</div>
+                                <div>
+                                    <img src="img/box-self-assembled_small.png" alt="box-self-assembled">
+                                </div>
+                            </div>
+                            <div class="params__result__parametrs">
+                                <div class="params__result__parametr"><span>Тип:</span> самосборная </div>
+                                <div class="params__result__parametr"><span>art:</span> FEFCO-0427 </div>
+                                <div class="params__result__parametr"><span>ДхШхВ:</span> 200х150х70мм </div>
+                                <div class="params__result__parametr"><span>Картон:</span> МГК 1.5мм, белый</div>
+                                <div class="params__result__parametr"><span>Количество:</span> 452</div>
+                                <div class="params__result__parametr"><span>Цена:</span> 54 589</div>
                             </div>
                         </div>
-                    </div> <!-- chekbox блок -->
-                    <div class="params__counter">
-                        <div class="params__parametr">Колличество</div>
-                        <div class="params__counter__wrapper">
-                            <button class="page-counter__btn">
-                                &#x2212;
-                            </button>
-                            <div>
-                                <input type="number" name="box-count" id="box-count" class="params__counter__input">
-                            </div>
-                            <button class="page-counter__btn">
-                                &#x2b;
-                            </button>
-                        </div> <!-- counter контэйнер -->
-                    </div>
-                    <div class="params__divider"></div>
-                    <h2 class="params__title">Результат настройки</h2>
-                    <div class="params__result">
-                        <div class="params__result__wrapper">
-                            <div class="params__result__title">Четырёхклапанная</div>
-                            <div>
-                                <img src="img/box-self-assembled_small.png" alt="box-self-assembled">
-                            </div>
-                        </div>
-                        <div class="params__result__parametrs">
-                            <div class="params__result__parametr"><span>Тип:</span> самосборная </div>
-                            <div class="params__result__parametr"><span>art:</span> FEFCO-0427 </div>
-                            <div class="params__result__parametr"><span>ДхШхВ:</span> 200х150х70мм </div>
-                            <div class="params__result__parametr"><span>Картон:</span> МГК 1.5мм, белый</div>
-                            <div class="params__result__parametr"><span>Количество:</span> 452</div>
-                            <div class="params__result__parametr"><span>Цена:</span> 54 589</div>
-                        </div>
-                    </div>
-                    <button class="button">В корзину</button>
-                </div> <!-- flex контэйнер -->
-            </div> <!--params  -->
-            <div class="cart">
+                        <button class="button params__result__btn">В корзину</button>
+                    </div> <!-- flex контэйнер -->
+                </div>
+                <!--params  -->
+                <div class="cart">
                     <div class="cart__container">
                         <h2 class="params__title">
                             Корзина
                         </h2>
-                        <div class="params__result">
-                            <div class="params__result__wrapper">
-                                <div class="params__result__title">Четырёхклапанная</div>
-                                <div>
-                                    <img src="img/box-self-assembled_small.png" alt="box-self-assembled">
-                                </div>
-                            </div>
-                            <div class="params__result__parametrs">
-                                <div class="params__result__parametr"><span>Тип:</span> самосборная </div>
-                                <div class="params__result__parametr"><span>art:</span> FEFCO-0427 </div>
-                                <div class="params__result__parametr"><span>ДхШхВ:</span> 200х150х70мм </div>
-                                <div class="params__result__parametr"><span>Картон:</span> МГК 1.5мм, белый</div>
-                                <div class="params__result__parametr"><span>Количество:</span> 452</div>
-                                <div class="params__result__parametr"><span>Цена:</span> 54 589</div>
-                            </div>
-                        </div>
-                        <div class="params__result">
-                            <div class="params__result__wrapper">
-                                <div class="params__result__title">Четырёхклапанная</div>
-                                <div>
-                                    <img src="img/box-self-assembled_small.png" alt="box-self-assembled">
-                                </div>
-                            </div>
-                            <div class="params__result__parametrs">
-                                <div class="params__result__parametr"><span>Тип:</span> самосборная </div>
-                                <div class="params__result__parametr"><span>art:</span> FEFCO-0427 </div>
-                                <div class="params__result__parametr"><span>ДхШхВ:</span> 200х150х70мм </div>
-                                <div class="params__result__parametr"><span>Картон:</span> МГК 1.5мм, белый</div>
-                                <div class="params__result__parametr"><span>Количество:</span> 452</div>
-                                <div class="params__result__parametr"><span>Цена:</span> 54 589</div>
-                            </div>
-                        </div>
                         <div class="cart__divider"></div>
+                        <div class="params__result">
+                            <div class="params__result__wrapper">
+                                <div class="params__result__title">Четырёхклапанная</div>
+                                <div>
+                                    <img src="img/box-self-assembled_small.png" alt="box-self-assembled">
+                                </div>
+                            </div>
+                            <div class="params__result__parametrs">
+                                <div class="params__result__parametr"><span>Тип:</span> самосборная </div>
+                                <div class="params__result__parametr"><span>art:</span> FEFCO-0427 </div>
+                                <div class="params__result__parametr"><span>ДхШхВ:</span> 200х150х70мм </div>
+                                <div class="params__result__parametr"><span>Картон:</span> МГК 1.5мм, белый</div>
+                                <div class="params__result__parametr"><span>Количество:</span> 452</div>
+                                <div class="params__result__parametr"><span>Цена:</span> 54 589</div>
+                            </div>
+                        </div>
+                        <div class="params__result">
+                            <div class="params__result__wrapper">
+                                <div class="params__result__title">Четырёхклапанная</div>
+                                <div>
+                                    <img src="img/box-self-assembled_small.png" alt="box-self-assembled">
+                                </div>
+                            </div>
+                            <div class="params__result__parametrs">
+                                <div class="params__result__parametr"><span>Тип:</span> самосборная </div>
+                                <div class="params__result__parametr"><span>art:</span> FEFCO-0427 </div>
+                                <div class="params__result__parametr"><span>ДхШхВ:</span> 200х150х70мм </div>
+                                <div class="params__result__parametr"><span>Картон:</span> МГК 1.5мм, белый</div>
+                                <div class="params__result__parametr"><span>Количество:</span> 452</div>
+                                <div class="params__result__parametr"><span>Цена:</span> 54 589</div>
+                            </div>
+                        </div>
+                        <div class="cart__divider_bottom"></div>
                         <div class="cart__delivery">
                             Оплатите сейчас и получите заказ через <span>10 дней</span>.
                         </div>
@@ -184,10 +179,12 @@
                         </div>
                         <button class="button cart__button">Оформить заказ</button>
                     </div> <!-- cart контэйнер -->
-            </div> <!--cart  -->
-            </div> <!--aside-container  -->
-            
-            
+                </div>
+                <!--cart  -->
+            </div>
+            <!--aside-container  -->
+
+
             <div class="showcase">
                 <div class="showcase__item">
                     <div class="showcase__button button__i"></div>

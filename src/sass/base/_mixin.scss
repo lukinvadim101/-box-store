@@ -22,7 +22,7 @@
         }
         
 @mixin divider($margin: 20px)  {
-    margin-top: $margin;
+    margin: $margin;
     width: 100%;
     height: 1px;
     background-color: #E3E3E3;
