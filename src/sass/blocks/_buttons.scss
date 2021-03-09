@@ -10,6 +10,62 @@
     color: #FFFFFF;
     border: none;
     cursor: pointer;
+    &:focus,:active {    // какие задать стили?
+        outline: 0;
+        border: none
+    }
+
+}
+
+.counter__btn {
+    width: 30px;
+        height: 30px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-style: none;
+        border-radius: 3px;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        &:focus,:active {    // какие задать стили?
+            outline: 0;
+            border: none
+        }
+        &-plus {
+            &::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color:#C2C2C2;
+                width: 14px;
+                height: 2px;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color:#C2C2C2;
+                width: 2px;
+                height: 14px;
+            }
+        }
+        &-minus {
+            &::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color:#C2C2C2;
+                width: 14px;
+                height: 2px;
+            }
+        }
 }
 
 .button__i { // сделать кнопку
@@ -19,10 +75,35 @@
     border-radius: 3px;
     border: none;
     cursor: pointer;
-    ::before {
+    position: relative;
+    
+    &::before {
         content: " ";
+        position: absolute;
+        left: 50%;
+        top: 25%;
         width: 2px;
         height: 2px;
         background-color:#FFFFFF;
+        transform: translate(-50%, -50%);
+    }
+    &::after {
+        content: " ";
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        width: 2px;
+        height: 9px;
+        background-color:#fff;
+        transform: translate(-50%, -50%);
+    }
+    &:focus:active {    // какие задать стили?
+        outline: 0;
+        border: none;
+        
+    }
+    &:hover {
+        background: $main-color;
+        transition: 2s;
     }
 }

@@ -22,18 +22,7 @@
             align-self: center;
         }
     }
-    &__btn {
-        width: 30px;
-        height: 30px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        border-style: none;
-        border-radius: 3px;
-        border: none;
-        cursor: pointer;
-    }
-
+    
     &__nums {
         display: flex;
         align-items: center;

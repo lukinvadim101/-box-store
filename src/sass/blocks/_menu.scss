@@ -1,5 +1,3 @@
-@import '../base/variables';
-
 .menu {
     max-width: 851px;
     background-color: #F4F4F4;
@@ -20,19 +18,45 @@
         width: 166px;
         height: 27px;
         margin-right: 12px;
+        position: relative;
+
         &_active {
             color: #000000;
         }
+        &:after {    
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            top: 125%;
+            left: 50%;
+            position: absolute;
+            background: $main-color;
+            transition: .2s;
+            width: 0;
+          }
+          &:hover:after { 
+            width: 72%; 
+            left: 0; 
+          }
+          &:nth-child(3) {
+            &:hover:after { 
+                width: 58%; 
+                left: 0; 
+              }
+        }
     }
+
     &__box-type {
         background-color: #FFFFFF;
         box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.15);
         border-radius: 0px 0px 5px 5px;
         display: flex;
+        justify-content: space-between;
         align-items: center;
         padding-left: 43px;
         height: 46px;
-    
+        
         &__item {
             width: 117px;
             height: 30px;
@@ -42,15 +66,33 @@
             align-self: center;
             display: inline-flex;
             justify-content: space-between;
+            position: relative;
+            &_active {
+                color: #000000;
+            }
+            &:after {    
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 2px;
+                top: 115%;
+                left: 50%;
+                position: absolute;
+                background: $main-color;
+                transition: .2s;
+                width: 0;
+              }
+              &:hover:after { 
+                width: 70%; 
+                left: 0; 
+              }
         }
     }
-    
+
     &__counter {
         display: flex;
         width: 104px;
         justify-content: space-between;
-        margin-left: auto; // выравнивание анти-флекс
         padding-right: 11px;
     }
 }
-

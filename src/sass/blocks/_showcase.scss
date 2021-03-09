@@ -17,6 +17,17 @@
         flex-direction: column;
         align-items: center;
         overflow: hidden;
+        
+        // &_active {
+        //     &::after {
+        //         content: "";
+        //         width: 100%;
+        //         height: 40%;
+        //         background-color: $main-color;
+        //     }
+            
+            
+        // }
 
     }
     &__button {
@@ -40,10 +51,20 @@
         }
     }
     &__divider {
-        @include divider;
+        @include divider (20px 0 0 0);
     }
     &__wrapper {
+        margin-top: 16px;
         width: 80%;
+        &_active { // в js?
+            margin: 0;
+            width: 100%;
+            height: 112px;
+            background-color: $main-color;
+            color:#FFFFFF;
+            padding-left: 56px;
+            transition: 2s;
+        }
     }
     &__title {
         @include title-main;
@@ -58,4 +79,5 @@
         font-weight: 600;
         font-size: 16px;
     }
+    
 }
