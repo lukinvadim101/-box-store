@@ -1,12 +1,18 @@
 .params {
+    &__title__settings {
+        @include title-main;
+        margin: 0 0 20px 0 ;
+        width: 80%;
+        }
+    
     &__result {
-        margin-left: 12px;
         width: 244px;
         max-height: 181px;
         background-color: #FAFAFA;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin-bottom: 9px;
 
         &__wrapper {
             margin-top: 16px;
@@ -17,19 +23,15 @@
         }
 
         &__title {
-            font-style: normal;
-            font-weight: 700;
-            font-size: 12px;
-            align-self: center;
+            @include subtitle-bold;
+            margin-bottom: 14px;
         }
         
-
         &__parametrs {
             width: 80%;
             height: 116px;
             display: flex;
             flex-direction: column;
-            margin-bottom: 15px;
         }
 
         &__parametr {

@@ -46,8 +46,7 @@
         width: 80%;
     }
     &__title {
-        font-weight: 600;
-        font-size: 16px;
+        @include title-main;
     }
     &__article {
         margin-top: 4px;
