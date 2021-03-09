@@ -36,7 +36,7 @@
     &__parametr {
         @include subtitle;
     }
-    
+
     &__input {
         width: 67px;
         height: 30px;
@@ -46,7 +46,10 @@
         border-radius: 3px;
         padding: 0 12px 0 12px;
         margin: 0;
-        &:focus,:active {    // какие задать стили?
+
+        &:focus,
+        :active {
+            // какие задать стили?
             outline: 0;
             border: none
         }
@@ -57,7 +60,9 @@
         display: flex;
         justify-content: space-between;
         margin-top: 12px;
-        &-type, &-color {
+
+        &-type,
+        &-color {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -75,21 +80,23 @@
             &__type {
                 margin-left: 9px;
             }
+
             &__color {
                 margin-left: 24px;
             }
         }
-        
+
         &__input {
             margin: 0;
             display: none;
-            
+
             &_round {
                 width: 17px;
                 height: 17px;
                 border: 1px solid #E3E3E3;
                 position: relative;
                 border-radius: 50%;
+
                 &::before {
                     content: "";
                     position: absolute;
@@ -101,15 +108,17 @@
                     left: 50%;
                     transform: translate(-50%, -50%);
                     opacity: 0;
-                    transition: .3s;  
+                    transition: .3s;
                 }
             }
+
             &_sqr {
                 width: 17px;
                 height: 17px;
                 border: 1px solid #E3E3E3;
                 position: relative;
                 border-radius: 20%;
+
                 &::before {
                     content: "";
                     position: absolute;
@@ -117,16 +126,31 @@
                     height: 16px;
                     border-radius: 20%;
                     background-color: #D9A262;
-                    // background-image:"../../icons/checkmark.svg" ;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                     opacity: 0;
-                    transition: .3s;  
+                    transition: .3s;
+                    z-index: 1;
                 }
+
+                // &::after{ // нужна svg круга с галкой
+                //     content: url("../icons/chekmark.svg");
+                //     position: absolute;
+                //     width: 13px;
+                //     height: 13px;
+                //     border-radius: 50%;
+                //     background-color: $main-color;
+                //     top: 5%;
+                //     left: 100%;
+                //     transform: translate(-50%, -50%);
+                //     opacity: 1;
+                //     transition: .3s;
+                //     z-index: 1;
+                // }
             }
         }
-        
+
     }
 
     &__counter {
@@ -148,12 +172,14 @@
             border: 1px solid #D8D8D8;
             box-sizing: border-box;
             border-radius: 3px;
-            padding-left: 40%;
+            padding: 20%;
             @include subtitle;
-            &:focus,:active {    // какие задать стили?
+
+            &:focus,
+            :active {
+                // какие задать стили?
                 outline: 0;
                 border: none
-                
             }
         }
 
@@ -166,9 +192,11 @@
         @include divider (20px 0 18px 0);
     }
 }
-.params__cardboard__input:checked + .params__cardboard__input_round::before {
+
+.params__cardboard__input:checked+.params__cardboard__input_round::before {
     opacity: 1;
 }
-.params__cardboard__input:checked + .params__cardboard__input_sqr::before {
+
+.params__cardboard__input:checked+.params__cardboard__input_sqr::before {
     opacity: 1;
 }
